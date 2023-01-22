@@ -44,7 +44,7 @@ def cpu(n):
 def file_space(n):
     space_value = check_cpu.file_sys_space()
     style = {'padding': '10px', 'fontSize': '32px'}
-    return html.Span('File system usage of {} is : {} %'.format(os.getcwd(),space_value), style=style)
+    return html.Span('File system usage of current disk is : {} %'.format(space_value), style=style)
 
 
     
