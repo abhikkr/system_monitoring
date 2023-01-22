@@ -47,6 +47,6 @@ def file_system_monitor():
 def file_sys_space():
     sys_path = os.getcwd()
     value = psutil.disk_usage(os.getcwd())
-    # print('value',value)
+    # print('value',type(sys_path))
     return value[3]
-# print(file_sys_space())
+# file_sys_space()
