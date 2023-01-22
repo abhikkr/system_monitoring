@@ -7,6 +7,7 @@ import sys
 import logging
 from watchdog.observers import Observer
 from watchdog.events import LoggingEventHandler
+import shutil
 def monitor_cpu_usage():
             return psutil.cpu_percent(1)
 
@@ -43,3 +44,9 @@ def file_system_monitor():
             observer.stop()
         observer.join()
         return observer
+def file_sys_space():
+    sys_path = os.getcwd()
+    value = psutil.disk_usage(os.getcwd())
+    # print('value',value)
+    return value[3]
+# print(file_sys_space())
